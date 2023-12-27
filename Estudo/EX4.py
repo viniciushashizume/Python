@@ -1,3 +1,8 @@
-#Siglas
+nome = input('Qual nome deseja inserir: ')
+palavras = nome.split()
+sigla = '' #String vazia 
 
-nome = str(input('Qual nome deseja inserir'))
+for palavra in palavras:
+    sigla += palavra[0].upper()
+
+print('A sigla é:', sigla)
