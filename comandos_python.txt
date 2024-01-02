@@ -1,0 +1,22 @@
+lista.append(x) --> inserir elemento no inicio
+
+lista.insert(posicao, elemento) -- > inserir em uma posicao
+
+for i in range():
+    num = input('Digite o numero ')
+    lista.insert(len(lista), num) #Inserir no final
+
+busca = input('Qual valor deseja buscar') --> buscar elemento em uma lista
+if busca in lista:
+    posicao = lista.index(busca) --> returna a posicao do elemento
+else
+	print('elemento nao esta lista')
+
+random.choice(elemento) --> escolhe um elemento aleatorio
+
+x.capitalize() --> x retorna string com a primeira letra maiuscula
+
+x.sort() --> ordena em ordem crescente
+
+palavra = input('Digite a palavra ')
+palavra_reversa = ''.join(reversed(palavra))

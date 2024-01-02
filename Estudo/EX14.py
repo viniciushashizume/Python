@@ -1,6 +1,6 @@
 #inserindo no final
 
-lista = []
+lista = []*5
 
 """for i in range(5):
     #num = input('Digite o numero ')
