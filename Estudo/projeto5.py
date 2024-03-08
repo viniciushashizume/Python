@@ -48,12 +48,8 @@ class operacoes:
             '''for produto in self.lista:
                 print("Nome do produto: ", produto.nome, "ID: ", produto.id)
                 print("\n")'''
-
-    
-
+            
 bd = operacoes()
-
-
 while True:
     op = input("Selecione a operacao que deseja executar")
     if op == "1":
