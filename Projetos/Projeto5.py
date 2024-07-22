@@ -20,8 +20,6 @@ class Empresa:
         for funcionario in self.funcionarios:
             funcionario.exibir_informacoes()
             
-
-
 funcionario1= Funcionario("A", "Caixa", 1500)
 funcionario2= Funcionario("B", "Caixa", 4500)
 
