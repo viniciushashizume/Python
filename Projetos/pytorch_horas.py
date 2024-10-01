@@ -10,7 +10,7 @@ times = [f"{random.randint(12, 16):02}:{random.randint(0, n_minutes - 1):02}" fo
 #:02 (garante que a formatação de horas tera obrigatoriamente 2 valores)
 #gera um numero randomico entre 0 e 23
 
-# Contagem das ocorrências de cada horário usando um dicionário comum
+# contagem das ocorrências de cada horário
 time_counts = {}
 
 for time in times:
