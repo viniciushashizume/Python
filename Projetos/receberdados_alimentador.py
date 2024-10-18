@@ -9,28 +9,28 @@ data = []
 @app.route('/data', methods=['POST']) 
 def receive_data():
     distancia = request.form.get('distancia') 
-    timestamp = request.form.get('timestamp')
+    tempo = request.form.get('timestamp')
 
-    if distancia is None or timestamp is None:
+    if distancia is None or tempo is None:
         return jsonify({"error": "Missing parameters"}), 400
 
     try:
         distancia = float(distancia)
-        timestamp = datetime.fromtimestamp(int(timestamp)) 
-        data.append({'distance': distancia, 'timestamp': timestamp})
+        tempo = datetime.fromtimestamp(int(tempo)) 
+        data.append({'distance': distancia, 'tempo': tempo})
 
-        save_to_csv(distancia, timestamp)
+        save_to_csv(distancia, tempo)
 
-        return jsonify({"message": "Data received", "distance": distancia, "timestamp": timestamp.isoformat()}), 200
+        return jsonify({"message": "Data received", "distance": distancia, "tempo": tempo.isoformat()}), 200
     except ValueError:
         return jsonify({"error": "Invalid data format"}), 400
 
-def save_to_csv(distance, timestamp):
+def save_to_csv(distance, tempo):
     filename = 'sensor_data.csv'
     file_exists = os.path.isfile(filename)
     with open(filename, mode='a') as file:
         if not file_exists:
-            file.write('timestamp,distance\n')
-        file.write(f"{timestamp.isoformat()},{distance}\n")
+            file.write('tempo,distance\n')
+        file.write(f"{tempo.isoformat()},{distance}\n")
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
