@@ -1,0 +1,2 @@
+import visual_automata
+print(visual_automata.__file__)

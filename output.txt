@@ -1,0 +1,66 @@
+Teste 1:
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_correto) ⇒ q2 - Menu
+(q2 - Menu, solicitar_saque) ⇒ q4 - Solicitar Valor de Saque
+(q4 - Solicitar Valor de Saque, operacao_concluida) ⇒ q5 - Saque Concluído
+(q5 - Saque Concluído, retirar_cartao) ⇒ q14 - Retirar Cartão
+Estado final alcançado: q14 - Retirar Cartão
+
+Teste 2:
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_incorreto) ⇒ q3 - PIN Incorreto
+(q3 - PIN Incorreto, pin_correto) ⇒ q2 - Menu
+(q2 - Menu, solicitar_transferencia) ⇒ q9 - Solicitar Transferência
+(q9 - Solicitar Transferência, transferencia_invalida) ⇒ q11 - Erro na Transferência
+Erro: Não chegou ao estado final. Estado atual: q11 - Erro na Transferência
+
+Teste 3:
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_incorreto) ⇒ q3 - PIN Incorreto
+(q3 - PIN Incorreto, pin_incorreto) ⇒ q3 - PIN Incorreto
+(q3 - PIN Incorreto, pin_incorreto) ⇒ q3 - PIN Incorreto
+Erro: Não chegou ao estado final. Estado atual: q3 - PIN Incorreto
+
+Teste 4:
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_correto) ⇒ q2 - Menu
+(q2 - Menu, consultar_saldo) ⇒ q7 - Solicitar Consulta de Saldo
+(q7 - Solicitar Consulta de Saldo, operacao_concluida) ⇒ q8 - Consulta de Saldo Concluída
+(q8 - Consulta de Saldo Concluída, retirar_cartao) ⇒ q14 - Retirar Cartão
+Estado final alcançado: q14 - Retirar Cartão
+
+Teste 5:
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_incorreto) ⇒ q3 - PIN Incorreto
+(q3 - PIN Incorreto, pin_correto) ⇒ q2 - Menu
+(q2 - Menu, solicitar_deposito) ⇒ q15 - Solicitar Valor Depósito
+(q15 - Solicitar Valor Depósito, operacao_concluida) ⇒ q16 - Depósito Concluído
+(q16 - Depósito Concluído, retirar_cartao) ⇒ q14 - Retirar Cartão
+Estado final alcançado: q14 - Retirar Cartão
+
+Teste 6:
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_correto) ⇒ q2 - Menu
+(q2 - Menu, solicitar_saque) ⇒ q4 - Solicitar Valor de Saque
+(q4 - Solicitar Valor de Saque, saldo_insuficiente) ⇒ q6 - Saldo Insuficiente
+(q6 - Saldo Insuficiente, erro) ⇒ q17 - Invalidar Operações
+Erro: Não chegou ao estado final. Estado atual: q17 - Invalidar Operações
+
+Teste 7:
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_correto) ⇒ q2 - Menu
+(q2 - Menu, solicitar_transferencia) ⇒ q9 - Solicitar Transferência
+(q9 - Solicitar Transferência, operacao_concluida) ⇒ q10 - Transferência Concluída
+(q10 - Transferência Concluída, retirar_cartao) ⇒ q14 - Retirar Cartão
+Estado final alcançado: q14 - Retirar Cartão
+
+Teste 8:
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_correto) ⇒ q2 - Menu
+(q2 - Menu, solicitar_saque) ⇒ q4 - Solicitar Valor de Saque
+(q4 - Solicitar Valor de Saque, operacao_concluida) ⇒ q5 - Saque Concluído
+(q5 - Saque Concluído, imprimir_recibo) ⇒ q12 - Solicitar Recibo
+(q12 - Solicitar Recibo, operacao_concluida) ⇒ q13 - Recibo Impresso
+(q13 - Recibo Impresso, retirar_cartao) ⇒ q14 - Retirar Cartão
+Estado final alcançado: q14 - Retirar Cartão
+
