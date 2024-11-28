@@ -1,0 +1,39 @@
+Teste 1:
+Estado inicial: q0 - Aguardar Cartão
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_correto) ⇒ q2 - Menu
+(q2 - Menu, solicitar_saque) ⇒ q4 - Solicitar Valor de Saque
+(q4 - Solicitar Valor de Saque, verificacao) ⇒ q18 - Verificação de Operação Saldo
+(q18 - Verificação de Operação Saldo, verificacao_saldo) ⇒ q5 - Saque Concluído
+(q5 - Saque Concluído, concluir) ⇒ q14 - Retirar Cartão
+(q14 - Retirar Cartão, retirar_cartao) ⇒ q0 - Aguardar Cartão
+Estado final alcançado: q0 - Aguardar Cartão
+
+Teste 2:
+Estado inicial: q0 - Aguardar Cartão
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_incorreto) ⇒ q3 - PIN Incorreto
+(q3 - PIN Incorreto, pin_correto) ⇒ q2 - Menu
+(q2 - Menu, consultar_saldo) ⇒ q7 - Solicitar Consulta de Saldo
+(q7 - Solicitar Consulta de Saldo, consulta_concluida) ⇒ q8 - Consulta de Saldo Concluída
+(q8 - Consulta de Saldo Concluída, concluir) ⇒ q14 - Retirar Cartão
+(q14 - Retirar Cartão, retirar_cartao) ⇒ q0 - Aguardar Cartão
+Estado final alcançado: q0 - Aguardar Cartão
+
+Teste 3:
+Estado inicial: q0 - Aguardar Cartão
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_correto) ⇒ q2 - Menu
+(q2 - Menu, solicitar_transferencia) ⇒ q9 - Solicitar Transferência
+(q9 - Solicitar Transferência, verificacao) ⇒ q20 - Verificação de Operação Transferência
+(q20 - Verificação de Operação Transferência, erro_transferencia) ⇒ q11 - Erro na Transferência
+Erro: Transição inválida para (q11 - Erro na Transferência, concluir)
+Erro: Não chegou ao estado final. Estado atual: q11 - Erro na Transferência
+
+Teste 4:
+Estado inicial: q0 - Aguardar Cartão
+(q0 - Aguardar Cartão, inserir_cartao) ⇒ q1 - Aguardar PIN Correto
+(q1 - Aguardar PIN Correto, pin_incorreto) ⇒ q3 - PIN Incorreto
+(q3 - PIN Incorreto, pin_incorreto) ⇒ q3 - PIN Incorreto
+(q3 - PIN Incorreto, pin_incorreto) ⇒ q3 - PIN Incorreto
+Erro: Não chegou ao estado final. Estado atual: q3 - PIN Incorreto

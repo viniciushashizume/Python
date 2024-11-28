@@ -1,0 +1,8 @@
+inserir_cartao - pin_correto - solicitar_saque - verificacao - verificacao_saldo - concluir - retirar_cartao
+inserir_cartao - pin_incorreto - pin_correto - consultar_saldo - consulta_concluida - concluir - retirar_cartao
+inserir_cartao - pin_correto - solicitar_transferencia - verificacao - erro_transferencia - concluir - retirar_cartao
+inserir_cartao - pin_incorreto - pin_incorreto - pin_incorreto
+
+
+
+
