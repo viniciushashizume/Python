@@ -30,7 +30,6 @@ interval = (-10, 10)
 train_nsamples = 1000
 test_nsamples = 100
      
-
 train_dataset = AlgebraicDataset(line, interval, train_nsamples)
 test_dataset = AlgebraicDataset(line, interval, test_nsamples)
 
