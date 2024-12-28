@@ -34,7 +34,7 @@ def jogo():
 
         # Verificar se acertou
         if resposta == palavra_aleatoria:
-            print(Fore.GREEN + "Parabéns! Você acertou a palavra!" + Style.RESET_ALL)
+            print(Fore.GREEN + "Você acertou a palavra!" + Style.RESET_ALL)
             break
     else:
         print(Fore.RED + f"Que pena! A palavra era: {palavra_aleatoria}." + Style.RESET_ALL)
