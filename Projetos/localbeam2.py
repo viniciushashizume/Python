@@ -8,33 +8,15 @@ class EstadosBrasil:
     def __init__(self):
         # Dicionário com sigla e nome dos estados
         self.estados = {
-            'AC': {'nome': 'Acre'},
-            'AL': {'nome': 'Alagoas'},
-            'AM': {'nome': 'Amazonas'},
-            'AP': {'nome': 'Amapá'},
-            'BA': {'nome': 'Bahia'},
-            'CE': {'nome': 'Ceará'},
-            'DF': {'nome': 'Distrito Federal'},
-            'ES': {'nome': 'Espírito Santo'},
-            'GO': {'nome': 'Goiás'},
-            'MA': {'nome': 'Maranhão'},
-            'MG': {'nome': 'Minas Gerais'},
-            'MS': {'nome': 'Mato Grosso do Sul'},
-            'MT': {'nome': 'Mato Grosso'},
-            'PA': {'nome': 'Pará'},
-            'PB': {'nome': 'Paraíba'},
-            'PE': {'nome': 'Pernambuco'},
-            'PI': {'nome': 'Piauí'},
-            'PR': {'nome': 'Paraná'},
-            'RJ': {'nome': 'Rio de Janeiro'},
-            'RN': {'nome': 'Rio Grande do Norte'},
-            'RO': {'nome': 'Rondônia'},
-            'RR': {'nome': 'Roraima'},
-            'RS': {'nome': 'Rio Grande do Sul'},
-            'SC': {'nome': 'Santa Catarina'},
-            'SE': {'nome': 'Sergipe'},
-            'SP': {'nome': 'São Paulo'},
-            'TO': {'nome': 'Tocantins'}
+            'AC': {'nome': 'Acre'}, 'AL': {'nome': 'Alagoas'},'AM': {'nome': 'Amazonas'},
+            'AP': {'nome': 'Amapá'},'BA': {'nome': 'Bahia'}, 'CE': {'nome': 'Ceará'},
+            'DF': {'nome': 'Distrito Federal'},'ES': {'nome': 'Espírito Santo'},'GO': {'nome': 'Goiás'},
+            'MA': {'nome': 'Maranhão'},'MG': {'nome': 'Minas Gerais'},'MS': {'nome': 'Mato Grosso do Sul'},
+            'MT': {'nome': 'Mato Grosso'},'PA': {'nome': 'Pará'},'PB': {'nome': 'Paraíba'},
+            'PE': {'nome': 'Pernambuco'},'PI': {'nome': 'Piauí'},'PR': {'nome': 'Paraná'},
+            'RJ': {'nome': 'Rio de Janeiro'},'RN': {'nome': 'Rio Grande do Norte'},'RO': {'nome': 'Rondônia'},
+            'RR': {'nome': 'Roraima'},'RS': {'nome': 'Rio Grande do Sul'},'SC': {'nome': 'Santa Catarina'},
+            'SE': {'nome': 'Sergipe'},'SP': {'nome': 'São Paulo'},'TO': {'nome': 'Tocantins'}
         }
         # Dicionário de conexões entre estados com as distâncias em km
         self.conexoes = {
@@ -73,7 +55,7 @@ class BuscadorCaminhos:
         self.estadosBrasil = estadosBrasil
         self.visualizador = visualizador
 
-    def buscaFeixeLocal(self, inicio, objetivo, k=100, maxIter=100):
+    def buscaFeixeLocal(self, inicio, objetivo, k=6, maxIter=27):
         # Inicializa com k caminhos começando no estado inicial
         estadosAtuais = [(0, inicio, [inicio])]  # (custo_acumulado, estado, caminho)
         

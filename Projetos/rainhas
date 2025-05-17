@@ -1,0 +1,116 @@
+import random
+import tkinter as tk
+from tkinter import messagebox
+
+def local_beam_search(n_rainhas, tamanho_feixe=5, max_iteracoes=1000):
+    """Função de busca local para resolver o problema das N-Rainhas"""
+    def criar_tabuleiro():
+        return [random.randint(0, n_rainhas-1) for _ in range(n_rainhas)]
+    
+    def contar_ataques(tabuleiro):
+        ataques = 0
+        for col1 in range(n_rainhas):
+            for col2 in range(col1+1, n_rainhas):
+                linha1, linha2 = tabuleiro[col1], tabuleiro[col2]
+                if linha1 == linha2 or abs(linha1 - linha2) == abs(col1 - col2):
+                    ataques += 1
+        return ataques
+    
+    def gerar_vizinhos(tabuleiro):
+        vizinhos = []
+        for coluna in range(n_rainhas):
+            for linha in range(n_rainhas):
+                if linha != tabuleiro[coluna]:
+                    novo_tabuleiro = tabuleiro.copy()
+                    novo_tabuleiro[coluna] = linha
+                    vizinhos.append(novo_tabuleiro)
+        return vizinhos
+    
+    tabuleiros_atuais = [criar_tabuleiro() for _ in range(tamanho_feixe)]
+    
+    for _ in range(max_iteracoes):
+        for tabuleiro in tabuleiros_atuais:
+            if contar_ataques(tabuleiro) == 0:
+                return tabuleiro
+        
+        todos_vizinhos = []
+        for tabuleiro in tabuleiros_atuais:
+            todos_vizinhos.extend(gerar_vizinhos(tabuleiro))
+        
+        todos_vizinhos.sort(key=lambda x: contar_ataques(x))
+        tabuleiros_atuais = todos_vizinhos[:tamanho_feixe]
+    
+    return None
+
+def criar_interface_grafica(n_rainhas):
+    """Cria a interface gráfica para exibir o tabuleiro"""
+    solucao = local_beam_search(n_rainhas)
+    
+    root = tk.Tk()
+    root.title(f"Problema das {n_rainhas}-Rainhas")
+    
+    if not solucao:
+        messagebox.showerror("Erro", "Nenhuma solução encontrada!")
+        root.destroy()
+        return
+    
+    # Configurações visuais
+    tamanho_celula = 60
+    cor_clara = "#f0d9b5"
+    cor_escura = "#b58863"
+    cor_rainha = "#ff0000"
+    
+    canvas = tk.Canvas(root, 
+                      width=n_rainhas*tamanho_celula, 
+                      height=n_rainhas*tamanho_celula)
+    canvas.pack()
+    
+    # Desenha o tabuleiro
+    for linha in range(n_rainhas):
+        for coluna in range(n_rainhas):
+            x1 = coluna * tamanho_celula
+            y1 = linha * tamanho_celula
+            x2 = x1 + tamanho_celula
+            y2 = y1 + tamanho_celula
+            
+            cor = cor_clara if (linha + coluna) % 2 == 0 else cor_escura
+            canvas.create_rectangle(x1, y1, x2, y2, fill=cor, outline="black")
+            
+            # Desenha a rainha se estiver nesta posição
+            if solucao[coluna] == linha:
+                canvas.create_text(x1 + tamanho_celula//2, 
+                                  y1 + tamanho_celula//2,
+                                  text="♕", 
+                                  font=("Arial", tamanho_celula//2),
+                                  fill=cor_rainha)
+    
+    # Adiciona rótulos de coordenadas
+    for i in range(n_rainhas):
+        # Colunas (letras)
+        canvas.create_text(i * tamanho_celula + tamanho_celula//2, 
+                          n_rainhas * tamanho_celula + 15,
+                          text=chr(65 + i),
+                          font=("Arial", 12))
+        
+        # Linhas (números)
+        canvas.create_text(n_rainhas * tamanho_celula + 15,
+                          i * tamanho_celula + tamanho_celula//2,
+                          text=str(i + 1),
+                          font=("Arial", 12))
+    
+    # Ajusta o tamanho da janela para acomodar os rótulos
+    root.geometry(f"{n_rainhas*tamanho_celula + 40}x{n_rainhas*tamanho_celula + 40}")
+    
+    # Botão para nova solução
+    def nova_solucao():
+        root.destroy()
+        criar_interface_grafica(n_rainhas)
+    
+    tk.Button(root, text="Nova Solução", command=nova_solucao).pack(pady=10)
+    
+    root.mainloop()
+
+# Configuração inicial
+if __name__ == "__main__":
+    n = 8  # Padrão 8-rainhas
+    criar_interface_grafica(n)
