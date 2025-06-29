@@ -1,0 +1,23 @@
+Análise para o aluno de índice: 1198 (Status Real: Evadiu)
+
+Características do Aluno em Teste:
+coeficiente           0.235675
+nota_media_historico  0.243714
+freq_media_historico  0.525171
+escore_vest           0.345405
+nota_enem             0.547300
+idade                 0.244307
+is_cotista            1.000000
+is_ponta_grossa       1.000000
+is_parana             1.000000
+renda_normalizada     0.166667
+
+==================================================
+
+Características dos Seus 5 Vizinhos Mais Próximos:
+      coeficiente  nota_media_historico  freq_media_historico  escore_vest  nota_enem     idade  is_cotista  is_ponta_grossa  is_parana  renda_normalizada
+1173     0.260020              0.320000              0.561214     0.334036     0.5473  0.298692           1                1          1           0.166667
+1185     0.132924              0.161429              0.438143     0.365176     0.5473  0.234738           1                1          1           0.333333
+1163     0.117178              0.146111              0.416500     0.368142     0.5473  0.228016           1                1          1           0.333333
+1140     0.096115              0.090000              0.494857     0.437341     0.5473  0.420482           1                1          1           0.333333
+1164     0.084049              0.073636              0.309273     0.355290     0.5473  0.306383           1                1          1           0.333333

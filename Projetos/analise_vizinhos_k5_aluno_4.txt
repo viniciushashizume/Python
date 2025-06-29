@@ -1,0 +1,23 @@
+Análise para o aluno de índice: 913 (Status Real: Evadiu)
+
+Características do Aluno em Teste:
+coeficiente           0.317791
+nota_media_historico  0.372308
+freq_media_historico  0.666462
+escore_vest           0.679046
+nota_enem             0.547300
+idade                 0.272469
+is_cotista            1.000000
+is_ponta_grossa       0.000000
+is_parana             0.000000
+renda_normalizada     0.333333
+
+==================================================
+
+Características dos Seus 5 Vizinhos Mais Próximos:
+      coeficiente  nota_media_historico  freq_media_historico  escore_vest  nota_enem     idade  is_cotista  is_ponta_grossa  is_parana  renda_normalizada
+929      0.447853              0.488750              0.801125     0.676574     0.5473  0.314377           1                0          1           0.333333
+957      0.784734              0.759130              0.883870     0.619237     0.5473  0.273861           1                0          1           0.500000
+1040     0.385685              0.394667              0.654267     0.564372     0.5473  0.269683           0                0          0           0.333333
+945      0.405317              0.392647              0.691118     0.541965     0.5473  0.276768           1                1          1           0.333333
+939      0.448671              0.458846              0.507577     0.701288     0.5473  0.364281           1                1          1           0.333333

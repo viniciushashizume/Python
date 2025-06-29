@@ -1,0 +1,23 @@
+Análise para o aluno de índice: 377 (Status Real: Evadiu)
+
+Características do Aluno em Teste:
+coeficiente           0.353067
+nota_media_historico  0.409600
+freq_media_historico  0.749800
+escore_vest           0.534056
+nota_enem             0.271726
+idade                 0.124758
+is_cotista            1.000000
+is_ponta_grossa       1.000000
+is_parana             1.000000
+renda_normalizada     0.166667
+
+==================================================
+
+Características dos Seus 5 Vizinhos Mais Próximos:
+      coeficiente  nota_media_historico  freq_media_historico  escore_vest  nota_enem     idade  is_cotista  is_ponta_grossa  is_parana  renda_normalizada
+383      0.315440              0.407288              0.693085     0.534056   0.448061  0.132449           1                1          1           0.166667
+375      0.313599              0.392222              0.838111     0.534056   0.332613  0.141776           1                1          1           0.333333
+1512     0.227403              0.275385              0.691308     0.534056   0.413269  0.149649           1                1          1           0.166667
+374      0.398466              0.502500              0.773708     0.534056   0.442790  0.145107           1                1          1           0.000000
+1520     0.404806              0.400000              0.679333     0.534056   0.482063  0.200642           1                1          1           0.333333

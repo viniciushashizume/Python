@@ -1,0 +1,23 @@
+Análise para o aluno de índice: 1080 (Status Real: Não Evadiu)
+
+Características do Aluno em Teste:
+coeficiente           0.824663
+nota_media_historico  0.781905
+freq_media_historico  0.877762
+escore_vest           0.754662
+nota_enem             0.547300
+idade                 0.333697
+is_cotista            1.000000
+is_ponta_grossa       1.000000
+is_parana             1.000000
+renda_normalizada     0.333333
+
+==================================================
+
+Características dos Seus 5 Vizinhos Mais Próximos:
+      coeficiente  nota_media_historico  freq_media_historico  escore_vest  nota_enem     idade  is_cotista  is_ponta_grossa  is_parana  renda_normalizada
+1081     0.735174              0.720625              0.904708     0.679778     0.5473  0.248728           1                1          1           0.500000
+1050     0.864110              0.824762              0.885500     0.613930     0.5473  0.246366           1                1          1           0.500000
+1063     0.817168              0.726400              0.742380     0.865325     0.5473  0.249213           1                1          1           0.500000
+1083     0.651329              0.665000              0.691326     0.585132     0.5473  0.340480           1                1          1           0.333333
+1059     0.808589              0.788409              0.820500     0.550532     0.5473  0.597989           1                1          1           0.166667

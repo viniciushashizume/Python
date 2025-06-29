@@ -1,0 +1,87 @@
+Resultados das Simulações da Rede Neural Perceptron
+==================================================
+
+------------------------------
+INICIANDO SIMULAÇÃO 1
+Parâmetros: {'entrada': 1, 'peso': 0.5, 'taxa_aprendizagem': 0.1, 'saida_desejada': 0}
+------------------------------
+
+Convergência atingida na Época 7.
+Épocas necessárias: 7
+Peso final do neurônio: -0.10
+
+
+------------------------------
+INICIANDO SIMULAÇÃO 2
+Parâmetros: {'entrada': 1, 'peso': 0.5, 'taxa_aprendizagem': 0.1, 'saida_desejada': 1}
+------------------------------
+
+Convergência atingida na Época 1.
+Épocas necessárias: 1
+Peso final do neurônio: 0.50
+
+
+------------------------------
+INICIANDO SIMULAÇÃO 3
+Parâmetros: {'entrada': 0, 'peso': 0.5, 'taxa_aprendizagem': 0.1, 'saida_desejada': 1}
+------------------------------
+
+Convergência atingida na Época 1.
+Épocas necessárias: 1
+Peso final do neurônio: 0.50
+
+
+------------------------------
+INICIANDO SIMULAÇÃO 4
+Parâmetros: {'entrada': 0, 'peso': 0.5, 'taxa_aprendizagem': 0.1, 'saida_desejada': 0}
+------------------------------
+
+A rede não convergiu após 100 épocas.
+Épocas necessárias: ∞ (não converge)
+Peso final do neurônio: 0.50
+
+
+------------------------------
+INICIANDO SIMULAÇÃO 5
+Parâmetros: {'entrada': 1, 'peso': 0.5, 'peso_bias': 0.5, 'taxa_aprendizagem': 0.1, 'saida_desejada': 0}
+------------------------------
+
+Convergência atingida na Época 7.
+Épocas necessárias: 7
+Peso final do neurônio: -0.10
+Peso final do Bias: -0.10
+
+
+------------------------------
+INICIANDO SIMULAÇÃO 6
+Parâmetros: {'entrada': 1, 'peso': 0.5, 'peso_bias': 0.5, 'taxa_aprendizagem': 0.1, 'saida_desejada': 1}
+------------------------------
+
+Convergência atingida na Época 1.
+Épocas necessárias: 1
+Peso final do neurônio: 0.50
+Peso final do Bias: 0.50
+
+
+------------------------------
+INICIANDO SIMULAÇÃO 7
+Parâmetros: {'entrada': 0, 'peso': 0.5, 'peso_bias': 0.5, 'taxa_aprendizagem': 0.1, 'saida_desejada': 1}
+------------------------------
+
+Convergência atingida na Época 1.
+Épocas necessárias: 1
+Peso final do neurônio: 0.50
+Peso final do Bias: 0.50
+
+
+------------------------------
+INICIANDO SIMULAÇÃO 8
+Parâmetros: {'entrada': 0, 'peso': 0.5, 'peso_bias': 0.5, 'taxa_aprendizagem': 0.1, 'saida_desejada': 0}
+------------------------------
+
+Convergência atingida na Época 7.
+Épocas necessárias: 7
+Peso final do neurônio: 0.50
+Peso final do Bias: -0.10
+
+
