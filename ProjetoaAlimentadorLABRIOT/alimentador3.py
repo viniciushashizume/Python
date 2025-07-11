@@ -41,14 +41,14 @@ def save_to_csv(distance, timestamp):
 def analyze_data():
     # Carregar os dados do arquivo CSV
     df = pd.read_csv('sensor_data.csv', parse_dates=['timestamp'])
-    df['hour'] = df['timestamp'].dt.hour  # Extrair a hora do timestamp
+    df['hour'] = df['timestamp'].dt.hour 
     
     # Agrupar os dados por hora e contar as leituras
     hourly_counts = df.groupby('hour')['distance'].count().reset_index()
     
     # Aplicar KMeans para identificar os picos
-    kmeans = KMeans(n_clusters=3)  # Você pode ajustar o número de clusters conforme necessário
-    hourly_counts['hour'] = hourly_counts['hour'].values.reshape(-1, 1)  # Reformatar para KMeans
+    kmeans = KMeans(n_clusters=3)
+    hourly_counts['hour'] = hourly_counts['hour'].values.reshape(-1, 1)
     kmeans.fit(hourly_counts[['hour']])
     
     hourly_counts['cluster'] = kmeans.labels_
@@ -64,7 +64,7 @@ def analyze_data():
     
     # Salvar o gráfico
     plt.savefig(os.path.join(os.getcwd(), 'hourly_peak_analysis.png'))
-    plt.close()  # Fechar a figura para liberar memória
+    plt.close()
 
     # Retornar os dados de análise
     return jsonify(hourly_counts.to_dict(orient='records')), 200
